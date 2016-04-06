@@ -1,7 +1,10 @@
 <?php
+	session_start();
+
 	$client_email=$_POST["email"];
 	$client_password=$_POST["pwd"];
-
+	$_SESSION["email"]=$client_email;//storing in session assoc array
+	$_SESSION["pwd"]=$client_password;
 	$servername="localhost";
 	$username="root";
 	$password="";
@@ -20,6 +23,7 @@
 		}	else
 		{
 			header("Location:http://localhost/WP%20Project/Sign-In.html");
+			session_reset();
 
 		}
 	}
