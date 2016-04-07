@@ -19,11 +19,12 @@
 		$res=mysqli_fetch_assoc($result);//takes the result stored in $result and saves it as an associative array given by $res
 		if (strcmp($res["password"],$client_password)==0)
 		{
-			header("Location:http://localhost/WP%20Project/Home-Page.html");
+			header("Location:http://localhost/WP_Project/Home-Page.html");
 		}	else
 		{
-			header("Location:http://localhost/WP%20Project/Sign-In.html");
-			session_reset();
+			header("Location:http://localhost/WP_Project/Sign-In.html");
+
+
 
 		}
 	}
